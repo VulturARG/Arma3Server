@@ -12,7 +12,7 @@ if not os.path.exists(KEYS) or not os.path.isdir(KEYS):
     os.makedirs(KEYS)
 
 subprocess.call(["/steamcmd/steamcmd.sh", "+login", os.environ["STEAM_USER"], os.environ["STEAM_PASSWORD"], "+force_install_dir", "/arma3", "+app_update", "233780", "validate", "+quit"])
-
+'''
 def mods(d):
     launch = "\""
     mods = [os.path.join(d,o) for o in os.listdir(d) if os.path.isdir(os.path.join(d,o))]
@@ -73,3 +73,4 @@ if os.path.exists("servermods"):
 
 print("LAUNCHING ARMA SERVER WITH",launch, flush=True)
 os.system(launch)
+'''

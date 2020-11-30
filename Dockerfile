@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-LABEL maintainer="Brett - github.com/synixebrett"
+LABEL maintainer="VulturARG - github.com/VulturARG"
 
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends --no-install-suggests \
@@ -8,7 +8,9 @@ RUN apt-get install -y --no-install-recommends --no-install-suggests \
         lib32stdc++6 \
         lib32gcc1 \
         wget \
-        ca-certificates
+        ca-certificates \
+        git \
+        htop
 RUN apt-get remove --purge -y
 RUN apt-get clean autoclean
 RUN apt-get autoremove -y
